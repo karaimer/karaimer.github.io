@@ -34,3 +34,18 @@ Alt-H1
 
 Alt-H2
 ------
+
+
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
