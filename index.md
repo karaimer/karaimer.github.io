@@ -10,13 +10,10 @@ website using
 [Markdown](https://daringfireball.net/projects/markdown/) and
 [git](http://git-scm.com).  
 
-
-
-<img align="right" src="image/pic_mountain.jpg">  
-
----
-
-
+| - | - |
+|---|---|
+| I am text to the left  | ![Flowers](/image/pic_mountain.jpg) |
+| ![Flowers](/image/pic_mountain.jpg) | I am text to the right |
 
 ---
 [Github Pages](http://pages.github.com) provide a simple way to make a
