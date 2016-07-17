@@ -17,12 +17,6 @@ website using
 [git](http://git-scm.com).
 
 
-***
-
-***
-***
-***
-***
 
 ### Structured documents
 
