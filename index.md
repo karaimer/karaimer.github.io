@@ -12,8 +12,7 @@ website using
 
 | - | - |
 |---|---|
-| I am text to the left  | ![Flowers](/image/pic_mountain.jpg) |
-| ![Flowers](/image/pic_mountain.jpg) | I am text to the right |
+| I am text to the left  | ![me](/image/pic_mountain.jpg =100x20) |
 
 ---
 [Github Pages](http://pages.github.com) provide a simple way to make a
