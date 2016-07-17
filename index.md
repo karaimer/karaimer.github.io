@@ -7,8 +7,7 @@ description: Hakki Can Karaimer
 
 | - | - |
 |---|---|
-| I'm a Computer Science PhD. student in [School of Computing](http://www.comp.nus.edu.sg/), National University of Singapore (NUS). I'm advised by Prof. [Michael S. Brown](https://www.comp.nus.edu.sg/~brown/). 
-My research interests are Image Processing, Computer Vision, and Computational Photography.    | ![](/image/profile.png) |
+| I'm a Computer Science PhD. student in [School of Computing](http://www.comp.nus.edu.sg/), National University of Singapore (NUS). I'm advised by Prof. [Michael S. Brown](https://www.comp.nus.edu.sg/~brown/). My research interests are Image Processing, Computer Vision, and Computational Photography.    | ![](/image/profile.png) |
 
 [My CV](/Hakki_Can_Karaimer_CV.pdf)  
 
@@ -17,7 +16,7 @@ My research interests are Image Processing, Computer Vision, and Computational P
 
 ---
 
-### Publicatios  
+### Publications  
 
 Karaimer H.C., Brown M.S.  (2016) "A Software Platform for Manipulating the Camera Imaging Pipeline", European Conference on Computer Vision (ECCV`16),  Oct 2016 [pdf](/paper/karaimer_eccv16.pdf)  
 
