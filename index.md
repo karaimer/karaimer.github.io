@@ -11,7 +11,7 @@ description: Hakki Can Karaimer
 
 [My CV](/Hakki_Can_Karaimer_CV.pdf)  
 
-[GoogleScholar](https://scholar.google.co.uk/citations?user=jhlnGS4AAAAJ&hl=en)  
+[Google Scholar](https://scholar.google.co.uk/citations?user=jhlnGS4AAAAJ&hl=en)  
 [LinkedIn](https://tr.linkedin.com/in/karaimer)  
 
 ---
