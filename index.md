@@ -6,8 +6,8 @@ description: Hakki Can Karaimer
 author: Hakki Can Karaimer
 ---
 
-| - | - |
-|---|---|
+| - | - | - |
+|---|---|---|
 | I'm a Computer Science PhD. student in [School of Computing](http://www.comp.nus.edu.sg/), National University of Singapore (NUS). I'm advised by Prof. [Michael S. Brown](https://www.comp.nus.edu.sg/~brown/). My research interests are Image Processing, Computer Vision, and Computational Photography.    | ![](/image/profile.png) |
 
 [My CV](/Hakki_Can_Karaimer_CV.pdf)  
