@@ -13,7 +13,7 @@ author: Hakki Can Karaimer
 [My CV](/Hakki_Can_Karaimer_CV.pdf)  
 
 [Google Scholar](https://scholar.google.co.uk/citations?user=jhlnGS4AAAAJ&hl=en)  
-[LinkedIn](null)  
+[LinkedIn](https://tr.linkedin.com/in/karaimer)  
 
 ---
 
