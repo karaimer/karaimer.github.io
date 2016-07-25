@@ -21,7 +21,7 @@ author: Hakki Can Karaimer
 
 #### International Conference and Workshop Papers
 
-Karaimer H.C., Brown M.S.  (2016) "A Software Platform for Manipulating the Camera Imaging Pipeline", European Conference on Computer Vision (ECCV`16),  Oct 2016 [[pdf]](/paper/karaimer_eccv16.pdf) [[project page]](https://karaimer.github.io/camera-pipeline)  
+Karaimer H.C., Brown M.S.  (2016) "A Software Platform for Manipulating the Camera Imaging Pipeline", European Conference on Computer Vision (ECCV`16),  Oct 2016 [[pdf]](/paper/karaimer_brown_eccv16.pdf) [[project page]](https://karaimer.github.io/camera-pipeline)  
 
 Karaimer H.C., Cinaroglu I., Bastanlar Y.  (2015) "Combining shape-based and gradient-based classifiers for vehicle classification", IEEE International Conference on Intelligent Transportation Systems (ITSC`15), Sep 2015 [[pdf]](/paper/null.pdf)  
 
