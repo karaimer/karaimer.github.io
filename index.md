@@ -37,7 +37,7 @@ Karaimer H.C., Bastanlar Y.  (2014) "Car Detection with Omnidirectional Cameras 
 
 #### Thesis
 
-Karaimer H.C.,   (2015) "Shape Based Detection and Classification of Vehicles using Omnidirectional Videos", MSc. Thesis, Izmir Institute of Technology, Jun 2015 [[pdf]](/paper/Karaimer_MSc_Thesis.pdf)  
+Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles using Omnidirectional Videos", MSc. Thesis, Izmir Institute of Technology, Jun 2015 [[pdf]](/paper/Karaimer_MSc_Thesis.pdf)  
 
 ### Teaching  
 
