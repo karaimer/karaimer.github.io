@@ -27,7 +27,7 @@ Karaimer H.C., Cinaroglu I., Bastanlar Y.  (2015) "Combining shape-based and gra
 
 Karaimer H.C., Bastanlar Y.  (2015) "Detection and Classification of Vehicles from Omnidirectional Videos using Temporal Average of Silhouettes", International Conference on Computer Vision Theory and Applications (VISAPP`15), Mar 2015 [[pdf]](/paper/Karaimer_Bastanlar_VISAPP15.pdf)  
 
-Karaimer H.C., et al.  (2013) "The visual object tracking vot2013 challenge results.", IEEE International Conference on Computer Vision Workshops (ICCVW`13), Dec 2013 [[pdf]](http://www.cv-foundation.org//openaccess/content_iccv_workshops_2013/W03/papers/Kristan_The_Visual_Object_2013_ICCV_paper.pdf)  
+Kristan M., et al.  (2013) "The visual object tracking vot2013 challenge results.", IEEE International Conference on Computer Vision Workshops (ICCVW`13), Dec 2013 [[pdf]](http://www.cv-foundation.org//openaccess/content_iccv_workshops_2013/W03/papers/Kristan_The_Visual_Object_2013_ICCV_paper.pdf)  
 
 #### National Conference Papers
 
