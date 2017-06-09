@@ -44,6 +44,14 @@ Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles usin
 
 ### Teaching  
 
-#### Sem 2, AY15/16:  
+#### Winter 2017 (York):  
+ 
+I was a teaching assistant for [EECS 1021: Object Oriented Programming from Sensors to Actuators](http://www.eecs.yorku.ca/course_archive/2016-17/W/1021/)  
+
+#### Fall 2016 (York):  
+ 
+I was a teaching assistant for [EECS/MATH 1019: Discrete Math for Computer Science](http://www.cs.yorku.ca/~jarek/courses/1019/F16/)  
+
+#### Sem 2, AY15/16 (NUS):  
  
 I was a teaching assistant for [CS2010: Data Structures and Algorithms II](http://www.comp.nus.edu.sg/~brown/cs2010/)  
