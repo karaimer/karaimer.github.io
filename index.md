@@ -8,7 +8,7 @@ author: Hakki Can Karaimer
 
 | - | - |
 |---|---|
-| I'm a Computer Science PhD. student in [Dept. of EECS](http://eecs.lassonde.yorku.ca/), York University. I'm advised by Prof. [Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). My research interests are Image Processing, Computer Vision, and Computational Photography.    | ![](/image/profile_pic.png){:height="320px" width="240px"} |
+| I'm a Computer Science Ph.D. student in [Dept. of EECS](http://eecs.lassonde.yorku.ca/), York University. I'm advised by Prof. [Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). My research interests are Image Processing, Computer Vision, and Computational Photography.    | ![](/image/profile_pic.png){:height="320px" width="240px"} |
 
 [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en)  
 [LinkedIn](https://www.linkedin.com/in/karaimer)  
