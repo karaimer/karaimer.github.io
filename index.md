@@ -28,7 +28,7 @@ Karaimer H.C., Bastanlar Y.  (2015) "Detection and Classification of Vehicles fr
 Kristan M., et al.  (2013) "The visual object tracking vot2013 challenge results.", IEEE International Conference on Computer Vision Workshops (ICCVW`13), Dec 2013 [[pdf]](http://www.cv-foundation.org//openaccess/content_iccv_workshops_2013/W03/papers/Kristan_The_Visual_Object_2013_ICCV_paper.pdf)  
 
 #### Journal Papers
-Karaimer H.C., Baris I., Bastanlar Y. (2017) "Detection and Classification of Vehicles from Omnidirectional Videos Using Multiple Silhouettes", Pattern Analysis and Applications (PAA), Feb 2017 [[pdf]](https://link.springer.com/article/10.1007/s10044-017-0593-z)
+Karaimer H.C., Baris I., Bastanlar Y. (2017) "Detection and Classification of Vehicles from Omnidirectional Videos Using Multiple Silhouettes", Pattern Analysis and Applications (PAA), Feb 2017 [[pdf]](http://rdcu.be/udbN)
 
 #### National Conference Papers
 
