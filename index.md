@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hakki Can Karaimer
+title: Hakki Can Karaimer,
 tagline: karaimer (at) eecs.yorku.ca
 description: Hakki Can Karaimer, Ph.D. student, EECS, York University, Canada
 author: Hakki Can Karaimer
