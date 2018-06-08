@@ -19,6 +19,8 @@ author: Hakki Can Karaimer
 
 #### International Conference and Workshop Papers
 
+Karaimer H.C., Brown M.S.  (2018) "Improving Color Reproduction Accuracy on Cameras", *IEEE Computer Vision and Pattern Recognition* (**CVPR`18**),  Jun 2018 [[pdf]](/paper/Karaimer_Brown_CVPR18.pdf) [[project page]](https://karaimer.github.io/camera-color/)  
+
 Karaimer H.C., Brown M.S.  (2016) "A Software Platform for Manipulating the Camera Imaging Pipeline", *European Conference on Computer Vision* (**ECCV`16**),  Oct 2016 [[pdf]](/paper/Karaimer_Brown_ECCV16.pdf) [[project page]](https://karaimer.github.io/camera-pipeline)  
 
 Karaimer H.C., Cinaroglu I., Bastanlar Y.  (2015) "Combining shape-based and gradient-based classifiers for vehicle classification", *IEEE International Conference on Intelligent Transportation Systems* (**ITSC`15**), Sep 2015 [[pdf]](/paper/Karaimer_et_al_ITSC15.pdf)  
