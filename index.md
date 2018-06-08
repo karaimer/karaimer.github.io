@@ -19,7 +19,7 @@ author: Hakki Can Karaimer
 
 #### International Conference and Workshop Papers
 
-Karaimer H.C., Brown M.S.  (2018) "Improving Color Reproduction Accuracy on Cameras", *IEEE Computer Vision and Pattern Recognition* (**CVPR`18**),  Jun 2018 [[pdf]](/paper/Karaimer_Brown_CVPR18.pdf) [[project page]](https://karaimer.github.io/camera-color/)  
+Karaimer H.C., Brown M.S.  (2018) "Improving Color Reproduction Accuracy on Cameras", *IEEE Computer Vision and Pattern Recognition* (**CVPR`18**),  June 2018 [[pdf]](/paper/Karaimer_Brown_CVPR18.pdf) [[project page]](https://karaimer.github.io/camera-color/)  
 
 Karaimer H.C., Brown M.S.  (2016) "A Software Platform for Manipulating the Camera Imaging Pipeline", *European Conference on Computer Vision* (**ECCV`16**),  Oct 2016 [[pdf]](/paper/Karaimer_Brown_ECCV16.pdf) [[project page]](https://karaimer.github.io/camera-pipeline)  
 
@@ -44,9 +44,13 @@ Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles usin
 
 ### Teaching  
 
+#### Winter 2018 (York):  
+ 
+I was a teaching assistant for [EECS 2011Z: Fundamentals of Data Structures](https://www.eecs.yorku.ca/course_archive/2017-18/W/2011Z/).  
+
 #### Fall 2017 (York):  
  
-I am a teaching assistant for [EECS 4422/5323: Computer Vision](https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4422/).  
+I was a teaching assistant for [EECS 4422/5323: Computer Vision](https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4422/).  
 
 #### Winter 2017 (York):  
  
