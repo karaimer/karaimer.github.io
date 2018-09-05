@@ -44,6 +44,10 @@ Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles usin
 
 ### Teaching  
 
+#### Fall 2018 (York):  
+ 
+I am a teaching assistant for [EECS 4422/5323: Computer Vision](https://wiki.eecs.yorku.ca/course_archive/2018-19/F/4422/).  
+
 #### Winter 2018 (York):  
  
 I was a teaching assistant for [EECS 2011Z: Fundamentals of Data Structures](https://www.eecs.yorku.ca/course_archive/2017-18/W/2011Z/).  
