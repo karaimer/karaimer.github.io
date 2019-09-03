@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Hakki Can Karaimer
-tagline: karaimer (at) eecs.yorku.ca
-description: Hakki Can Karaimer, Ph.D. student, EECS, York University, Canada
+tagline: hakki.karaimer (at) epfl.ch
+description: Hakki Can Karaimer, Postdoctoral researcher, IC, EPFL, Switzerland
 author: Hakki Can Karaimer
 ---
 
 | - | - |
 |---|---|
-| I am a Computer Science Ph.D. student at the [Department of Electrical Engineering and Computer Science](http://eecs.lassonde.yorku.ca/) of the [York University](http://www.yorku.ca/index.html). I am advised by Prof. [Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). My research interests include image processing, computer vision, and computational photography.    | ![](/image/profile_pic.png){:height="320px" width="240px"} |
+| I am a postdoctoral researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) of the [Ecole Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the supervision of [Prof. Sabine Süsstrunk](https://ivrl.epfl.ch/people/people-susstrunk/). I started my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) of the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, was advised by [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year in NUS, Prof. Brown decided to leave NUS and joined to the [Lassonde School of Engineering](https://lassonde.yorku.ca) of the [York University](https://www.yorku.ca/index.html) in Toronto, then I followed him. I received my Ph.D. in August 2019 from the same institution. My research interests include image processing, computer vision, and computational photography.     | ![](/image/profile_pic.png){:height="320px" width="240px"} |
 
 [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en)  
 [LinkedIn](https://www.linkedin.com/in/karaimer)  
@@ -18,6 +18,12 @@ author: Hakki Can Karaimer
 ### Publications  
 
 #### International Conference and Workshop Papers
+
+Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf coming soon]](/paper/Karaimer_Brown_CIC19.pdf) [[project page coming soon]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
+
+
+Karaimer H.C., Khodadad, I., Kazemzadeh, F., Brown, M. S.  (2019) "A Customized Camera Imaging Pipeline for Dermatological Imaging", *IEEE Computer Vision and Pattern Recognition Worksops* (**CVPRW`19**),  June 2019 [[pdf coming soon]](/paper/Karaimer_et_al_2019.pdf) [[project page coming soon]](https://karaimer.github.io/customized-camera/)  
+
 
 Karaimer H.C., Brown M.S.  (2018) "Improving Color Reproduction Accuracy on Cameras", *IEEE Computer Vision and Pattern Recognition* (**CVPR`18**),  June 2018 [[pdf]](/paper/Karaimer_Brown_CVPR18.pdf) [[project page]](https://karaimer.github.io/camera-color/)  
 
@@ -46,7 +52,7 @@ Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles usin
 
 #### Winter 2019 (York):  
  
-I am a teaching assistant for [EECS 1022: Programming for Mobile Computing](https://www.eecs.yorku.ca/course_archive/2018-19/W/1022/).  
+I was a teaching assistant for [EECS 1022: Programming for Mobile Computing](https://www.eecs.yorku.ca/course_archive/2018-19/W/1022/).  
 
 #### Fall 2018 (York):  
  
