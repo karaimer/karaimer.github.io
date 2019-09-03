@@ -8,7 +8,7 @@ author: Hakki Can Karaimer
 
 | - | - |
 |---|---|
-| I am a postdoctoral researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) of the [Ecole Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the supervision of [Prof. Sabine Süsstrunk](https://ivrl.epfl.ch/people/people-susstrunk/). I started my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) of the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, was advised by [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year in NUS, Prof. Brown decided to leave NUS and joined to the [Lassonde School of Engineering](https://lassonde.yorku.ca) of the [York University](https://www.yorku.ca/index.html) in Toronto, then I followed him. I received my Ph.D. in August 2019 from the same institution. My research interests include image processing, computer vision, and computational photography.     | ![](/image/profile_pic.png){:height="320px" width="640px"} |
+| I am a postdoctoral researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) of the [Ecole Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the supervision of [Prof. Sabine Süsstrunk](https://ivrl.epfl.ch/people/people-susstrunk/). I started my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) of the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, was advised by [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year in NUS, Prof. Brown decided to leave NUS and joined to the [Lassonde School of Engineering](https://lassonde.yorku.ca) of the [York University](https://www.yorku.ca/index.html) in Toronto, then I followed him. I received my Ph.D. in August 2019 from the same institution. My research interests include image processing, computer vision, and computational photography.     | ![](/image/profile_pic.png){:height="320px" width="720px"} |
 
 [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en)  
 [LinkedIn](https://www.linkedin.com/in/karaimer)  
@@ -44,7 +44,9 @@ Karaimer H.C., Bastanlar Y.  (2015) "Classification of Vehicles Using Binary For
 
 Karaimer H.C., Bastanlar Y.  (2014) "Car Detection with Omnidirectional Cameras Using Haar-Like Features and Cascaded Boosting (in Turkish)", *IEEE Conference on Signal Processing and Applications* (**SIU`14**), Apr 2014 [[pdf]](/paper/Karaimer_Bastanlar_SIU2014.pdf)  
 
-#### Thesis
+#### Theses
+
+Karaimer H.C.  (2019) "A Study of Colour Rendering in the In-Camera Imaging Pipeline", PhD. Thesis, York University, Aug 2019 [[pdf coming soon]](/paper/Karaimer_PhD_Thesis.pdf)  
 
 Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles using Omnidirectional Videos", MSc. Thesis, Izmir Institute of Technology, Jun 2015 [[pdf]](/paper/Karaimer_MSc_Thesis.pdf)  
 
