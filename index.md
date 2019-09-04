@@ -22,7 +22,7 @@ author: Hakki Can Karaimer
 Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf coming soon]](/paper/Karaimer_Brown_CIC19.pdf) [[project page coming soon]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
 
 
-Karaimer H.C., Khodadad, I., Kazemzadeh, F., Brown, M. S.  (2019) "A Customized Camera Imaging Pipeline for Dermatological Imaging", *IEEE Computer Vision and Pattern Recognition Workshops* (**CVPRW`19**),  June 2019 [[pdf coming soon]](/paper/Karaimer_et_al_2019.pdf) [[project page coming soon]](https://karaimer.github.io/customized-camera/)  
+Karaimer H.C., Khodadad, I., Kazemzadeh, F., Brown, M. S.  (2019) "A Customized Camera Imaging Pipeline for Dermatological Imaging", *ISIC Skin Image Analysis Workshop * (at **CVPR`19**), June 2019 [[pdf coming soon]](/paper/Karaimer_et_al_2019.pdf) [[project page coming soon]](https://karaimer.github.io/customized-camera/)  
 
 
 Karaimer H.C., Brown M.S.  (2018) "Improving Color Reproduction Accuracy on Cameras", *IEEE Computer Vision and Pattern Recognition* (**CVPR`18**),  June 2018 [[pdf]](/paper/Karaimer_Brown_CVPR18.pdf) [[project page]](https://karaimer.github.io/camera-color/)  
