@@ -46,7 +46,7 @@ Karaimer H.C., Bastanlar Y.  (2014) "Car Detection with Omnidirectional Cameras 
 
 #### Theses
 
-Karaimer H.C.  (2019) "A Study of Colour Rendering in the In-Camera Imaging Pipeline", PhD. Thesis, York University, Aug 2019 [[pdf]](https://www.dropbox.com/s/nw3qyjwc6kw4jg8/Karaimer_Hakki_C_2019_PhD.pdf?dl=0)  
+Karaimer H.C.  (2019) "A Study of Colour Rendering in the In-Camera Imaging Pipeline", PhD. Thesis, York University, Aug 2019 [[pdf]](https://drive.switch.ch/index.php/s/WHANMKNGbuFmw4q)  
 
 Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles using Omnidirectional Videos", MSc. Thesis, Izmir Institute of Technology, Jun 2015 [[pdf]](/paper/Karaimer_MSc_Thesis.pdf)  
 
