@@ -19,7 +19,7 @@ author: Hakki Can Karaimer
 
 #### International Conference and Workshop Papers
 
-Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf coming soon]](/paper/Karaimer_Brown_CIC19.pdf) [[project page coming soon]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
+Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf]](/paper/Karaimer_Brown_CIC19.pdf) [[project page coming soon]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
 
 
 Karaimer H.C., Khodadad, I., Kazemzadeh, F., Brown, M. S.  (2019) "A Customized Camera Imaging Pipeline for Dermatological Imaging", *ISIC Skin Image Analysis Workshop* (at **CVPR`19**), June 2019 [[pdf]](/paper/Karaimer_et_al_2019.pdf) [[project page coming soon]](https://karaimer.github.io/customized-camera/)  
