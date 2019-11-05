@@ -46,36 +46,36 @@ Karaimer H.C., Bastanlar Y.  (2014) "Car Detection with Omnidirectional Cameras 
 
 #### Theses
 
-Karaimer H.C.  (2019) "A Study of Colour Rendering in the In-Camera Imaging Pipeline", PhD. Thesis, York University, Aug 2019 [[pdf]](https://drive.switch.ch/index.php/s/WHANMKNGbuFmw4q)  
+Karaimer H.C.  (2019) "A Study of Colour Rendering in the In-Camera Imaging Pipeline", PhD. Thesis, York University, Aug 2019 [[pdf]](/paper/Karaimer_Hakki_C_2019_PhD.pdf)  
 
 Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles using Omnidirectional Videos", MSc. Thesis, Izmir Institute of Technology, Jun 2015 [[pdf]](/paper/Karaimer_MSc_Thesis.pdf)  
 
 ### Teaching  
 
 #### Winter 2019 (York):  
- 
+
 I was a teaching assistant for [EECS 1022: Programming for Mobile Computing](https://www.eecs.yorku.ca/course_archive/2018-19/W/1022/).  
 
 #### Fall 2018 (York):  
- 
+
 I was a teaching assistant for [EECS 4422/5323: Computer Vision](https://wiki.eecs.yorku.ca/course_archive/2018-19/F/4422/).  
 
 #### Winter 2018 (York):  
- 
+
 I was a teaching assistant for [EECS 2011Z: Fundamentals of Data Structures](https://www.eecs.yorku.ca/course_archive/2017-18/W/2011Z/).  
 
 #### Fall 2017 (York):  
- 
+
 I was a teaching assistant for [EECS 4422/5323: Computer Vision](https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4422/).  
 
 #### Winter 2017 (York):  
- 
+
 I was a teaching assistant for [EECS 1021: Object Oriented Programming from Sensors to Actuators](http://www.eecs.yorku.ca/course_archive/2016-17/W/1021/).  
 
 #### Fall 2016 (York):  
- 
+
 I was a teaching assistant for [EECS/MATH 1019: Discrete Math for Computer Science](http://www.cs.yorku.ca/~jarek/courses/1019/F16/).  
 
 #### Sem 2, AY15/16 (NUS):  
- 
+
 I was a teaching assistant for [CS2010: Data Structures and Algorithms II](http://www.comp.nus.edu.sg/~brown/cs2010/).  
