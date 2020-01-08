@@ -21,6 +21,7 @@ author: Hakki Can Karaimer
 
 Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf]](/paper/Karaimer_Brown_CIC19.pdf) [[project page]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
 
+Afifi M., Punnappurath A., Abdelhamed A., Karaimer H.C., Abuolaim A., Brown M.S.  (2019) "Color Temperature Tuning: Allowing Accurate Post-Capture White-Balance Editing", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf]](http://cvil.eecs.yorku.ca/projects/public_html/ColorTemperatureTuning/files/ColorTemperatureTuning.pdf) [[project page]](http://cvil.eecs.yorku.ca/projects/public_html/ColorTemperatureTuning/)  
 
 Karaimer H.C., Khodadad, I., Kazemzadeh, F., Brown, M. S.  (2019) "A Customized Camera Imaging Pipeline for Dermatological Imaging", *ISIC Skin Image Analysis Workshop* (at **CVPR`19**), June 2019 [[pdf]](/paper/Karaimer_et_al_2019.pdf) [[project page]](https://karaimer.github.io/customized-camera/)  
 
