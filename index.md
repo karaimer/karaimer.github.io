@@ -17,6 +17,10 @@ author: Hakki Can Karaimer
 
 ### Publications  
 
+#### Patents 
+
+Brown M.S., Karaimer H.C.  (2019) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, Dec 2019, [[pdf]](https://patentimages.storage.googleapis.com/49/d2/e4/8e048c23fc8ff6/US20190373232A1.pdf) 
+
 #### International Conference and Workshop Papers
 
 Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf]](/paper/Karaimer_Brown_CIC19.pdf) [[project page]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
@@ -35,10 +39,6 @@ Karaimer H.C., Cinaroglu I., Bastanlar Y.  (2015) "Combining shape-based and gra
 Karaimer H.C., Bastanlar Y.  (2015) "Detection and Classification of Vehicles from Omnidirectional Videos using Temporal Average of Silhouettes", *International Conference on Computer Vision Theory and Applications* (**VISAPP`15**), Mar 2015 [[pdf]](/paper/Karaimer_Bastanlar_VISAPP15.pdf)  
 
 Kristan M., et al.  (2013) "The Visual Object Tracking VOT2013 challenge results", *Workshop on Visual Object Tracking Challenge* (at **ICCV`13**), Dec 2013 [[pdf]](http://www.cv-foundation.org//openaccess/content_iccv_workshops_2013/W03/papers/Kristan_The_Visual_Object_2013_ICCV_paper.pdf)  
-
-#### Patents 
-
-Brown M.S., Karaimer H.C.  (2019) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, Dec 2019, [[pdf]](https://patentimages.storage.googleapis.com/49/d2/e4/8e048c23fc8ff6/US20190373232A1.pdf) 
 
 #### Journal Papers
 Karaimer H.C., Baris I., Bastanlar Y. (2017) "Detection and Classification of Vehicles from Omnidirectional Videos Using Multiple Silhouettes", *Pattern Analysis and Applications* (**PAA**), 20(3), Aug 2017 [[pdf]](/paper/Karaimer_et_al_PAAA_AAM.pdf)
