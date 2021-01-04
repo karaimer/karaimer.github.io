@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hakki Can Karaimer
-tagline: myfullname (at) gmail.com
+tagline: hakkicankaraimer (at) gmail.com
 description: Hakki Can Karaimer, Member of technical staff, Advanced Micro Devices, Inc. (AMD)
 author: Hakki Can Karaimer
 ---
