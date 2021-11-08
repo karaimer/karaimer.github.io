@@ -61,6 +61,10 @@ Karaimer H.C.  (2015) "Shape Based Detection and Classification of Vehicles usin
 
 ### Teaching  
 
+#### Winter 2020 (EPFL):  
+
+I was a teaching assistant for [CS-413: Computational photography](https://edu.epfl.ch/coursebook/en/computational-photography-CS-413).  
+
 #### Winter 2019 (York):  
 
 I was a teaching assistant for [EECS 1022: Programming for Mobile Computing](https://www.eecs.yorku.ca/course_archive/2018-19/W/1022/).  
