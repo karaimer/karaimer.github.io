@@ -23,6 +23,8 @@ author: Hakki Can Karaimer
 Brown M.S., Karaimer H.C.  (2019) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, Dec 2019, [[pdf]](https://patentimages.storage.googleapis.com/49/d2/e4/8e048c23fc8ff6/US20190373232A1.pdf) 
 
 #### International Conference and Workshop Papers
+Marouf I.E., Barras L., Karaimer H.C., Süsstrunk S.  (2021) "Joint Unsupervised Infrared-RGB Video Registration and Fusion", *London Imaging Meeting* (**LIM`21**),  September 2021 [[pdf]](/paper/Joint_Unsupervised_Video_Registration_and_Fusion.pdf) [[project page]](https://iemprog.github.io/joint-unsupervised/)  
+
 Karaimer H.C., Nguyen H.M.R.  (2020) "A Correspondence-Free Color Chart Design for Color Calibration", *London Imaging Meeting* (**LIM`20**),  September 2020 [[pdf]](/paper/color_pattern_LIM19_CR.pdf) [[project page]](https://karaimer.github.io/color-pattern/)  
 
 Karaimer H.C., Brown M.S.  (2019) "Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State", *Color and Imaging Conference* (**CIC`19**),  October 2019 [[pdf]](/paper/Karaimer_Brown_CIC19.pdf) [[project page]](https://karaimer.github.io/beyond-rawRGB-sRGB/)  
