@@ -2,13 +2,13 @@
 layout: page
 title: Hakki Can Karaimer
 tagline: hakkicankaraimer (at) gmail.com
-description: Hakki Can Karaimer, Member of technical staff, Advanced Micro Devices, Inc. (AMD)
+description: Hakki Can Karaimer, Senior engineer, Qualcomm Inc.
 author: Hakki Can Karaimer
 ---
 
 | - | - |
 |---|---|
-| I am a member of technical staff at [Advanced Micro Devices, Inc. (AMD)](https://www.amd.com/en). Before; I was a postdoctoral researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) of the [Ecole Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the supervision of [Prof. Sabine Süsstrunk](https://www.epfl.ch/labs/ivrl/people/susstrunk/). I started my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) of the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, was advised by [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year in NUS, Prof. Brown decided to leave NUS and joined the [Lassonde School of Engineering](https://lassonde.yorku.ca) of the [York University](https://www.yorku.ca/index.html) in Toronto, then I followed him. I received my Ph.D. in August 2019 from the same institution. My research interests include image processing, computer vision, and computational photography.     | ![](/image/original_0099.png){:height="720px" width="1200px"} |
+| I am a senior engineer at [Qualcomm Inc.](https://www.qualcomm.com/). Before; I was a member of technical staff at [Advanced Micro Devices, Inc. (AMD)](https://www.amd.com/en). Latest in my academic career, I was a postdoctoral researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) of the [Ecole Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the supervision of [Prof. Sabine Süsstrunk](https://www.epfl.ch/labs/ivrl/people/susstrunk/). I started my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) of the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, was advised by [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year in NUS, Prof. Brown decided to leave NUS and joined the [Lassonde School of Engineering](https://lassonde.yorku.ca) of the [York University](https://www.yorku.ca/index.html) in Toronto, then I followed him. I received my Ph.D. in August 2019 from the same institution. My research interests include image processing, computer vision, and computational photography.     | ![](/image/original_0099.png){:height="720px" width="1200px"} |
 
 [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en)  
 [LinkedIn](https://www.linkedin.com/in/karaimer)  
