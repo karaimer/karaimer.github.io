@@ -20,7 +20,7 @@ author: Hakki Can Karaimer
 
 #### Patents 
 
-Brown M.S., Karaimer H.C.  (2019) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, Dec 2019, [[pdf]](https://patentimages.storage.googleapis.com/49/d2/e4/8e048c23fc8ff6/US20190373232A1.pdf) 
+Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, May 2022, [[pdf]](https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf) 
 
 #### International Conference and Workshop Papers
 Marouf I.E., Barras L., Karaimer H.C., Süsstrunk S.  (2021) "Joint Unsupervised Infrared-RGB Video Registration and Fusion", *London Imaging Meeting* (**LIM`21**),  September 2021 [[pdf]](/paper/Joint_Unsupervised_Video_Registration_and_Fusion.pdf) [[project page]](https://iemprog.github.io/joint-unsupervised/)  
