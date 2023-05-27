@@ -20,7 +20,16 @@ author: Hakki Can Karaimer
 
 #### Patents 
 
-Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, May 2022, [[pdf]](https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf) 
+Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, May 2022 [[pdf]](https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf) 
+
+#### Patent Applications
+
+Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2022) "Method and Apparatus for Adjustting Video Brightness", *U.S. Patent*, Dec 2022 [[pdf]](https://patentimages.storage.googleapis.com/a6/e5/fa/68cb000f64f1d9/US20220417466A1.pdf)
+
+Wu V.Y., Yu W.H., Karaimer H.C. (2022) "Real Time Machine Learning-Based Privacy Filter for Removing Reflective Features from Images and Video", *U.S. Patent*, Oct 2022 [[pdf]](https://patentimages.storage.googleapis.com/90/e8/d1/1b612127897f77/US20220318954A1.pdf)
+
+Brown M.S., Afifi M., Abdelhamed A., Karaimer H.C., Abuolaim A., Punnappurath A.  (2022) "Systems and method of Processing of a Captured Image to Facilitate Post-Processing Modification", *U.S. Patent*, July 2022 [[pdf]](https://patentimages.storage.googleapis.com/a7/19/68/5090dc2efb56a8/US20220215505A1.pdf)
+
 
 #### International Conference and Workshop Papers
 Marouf I.E., Barras L., Karaimer H.C., Süsstrunk S.  (2021) "Joint Unsupervised Infrared-RGB Video Registration and Fusion", *London Imaging Meeting* (**LIM`21**),  September 2021 [[pdf]](/paper/Joint_Unsupervised_Video_Registration_and_Fusion.pdf) [[project page]](https://iemprog.github.io/joint-unsupervised/)  
