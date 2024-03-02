@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hakki Can Karaimer
-tagline: hakkicankaraimer (at) gmail.com
+tagline: hakki.can.karaimer (at) gmail.com
 description: Hakki Can Karaimer, Senior engineer, Qualcomm Inc.
 author: Hakki Can Karaimer
 ---
