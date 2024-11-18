@@ -10,6 +10,8 @@ author: Hakki Can Karaimer
 |---|---|
 | I am a Staff Research Scientist at [Samsung Research America (SRA)](https://sra.samsung.com/). Previously, I have worked at [Qualcomm Inc.](https://www.qualcomm.com/) and [Advanced Micro Devices, Inc. (AMD)](https://www.amd.com/en). In my most recent academic role, I served as a Postdoctoral Researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) at the [École Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the guidance of [Prof. Sabine Süsstrunk](https://www.epfl.ch/labs/ivrl/people/susstrunk/). I began my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) at the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, working under the supervision of [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year, Prof. Brown transitioned to the [Lassonde School of Engineering](https://lassonde.yorku.ca) at [York University](https://www.yorku.ca/index.html) in Toronto, and I followed him there. I completed my Ph.D. in August 2019 from York University. My research interests include image processing, computer vision, and computational photography. | ![](/image/hk_profile.png){:height="1400px" width="1600px"} |
 
+---
+
 [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en)  
 [LinkedIn](https://www.linkedin.com/in/karaimer)  
 [GitHub](https://github.com/karaimer)
