@@ -2,7 +2,7 @@
 layout: page
 title: Hakki Can Karaimer
 tagline: hakki.can.karaimer (at) gmail.com
-description: Hakki Can Karaimer, Senior engineer, Qualcomm Inc.
+description: Hakki Can Karaimer, Staff Research Scientist, Samsung Research America (SRA)
 author: Hakki Can Karaimer
 ---
 
