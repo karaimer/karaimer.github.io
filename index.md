@@ -14,7 +14,7 @@ author: Hakki Can Karaimer
 
 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| | | | [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en) | | | | [LinkedIn](https://www.linkedin.com/in/karaimer) | | | | [GitHub](https://github.com/karaimer) | | | |
+| [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en) | | | | | | | [LinkedIn](https://www.linkedin.com/in/karaimer) | | | | | | | [GitHub](https://github.com/karaimer) |
 
 ---
 
