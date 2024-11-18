@@ -12,7 +12,7 @@ author: Hakki Can Karaimer
 
 | - | - | - | - | - | - | - |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| <td colspan=2>[Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en) | <td colspan=2>[LinkedIn](https://www.linkedin.com/in/karaimer) | <td colspan=2>[GitHub](https://github.com/karaimer) |
+| <td colspan=2> [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en) | <td colspan=2> [LinkedIn](https://www.linkedin.com/in/karaimer) | <td colspan=2> [GitHub](https://github.com/karaimer) |
 
 ---
 
