@@ -10,9 +10,9 @@ author: Hakki Can Karaimer
 |---|---|
 | I am a Staff Research Scientist at [Samsung Research America (SRA)](https://sra.samsung.com/). Previously, I have worked at [Qualcomm Inc.](https://www.qualcomm.com/) and [Advanced Micro Devices, Inc. (AMD)](https://www.amd.com/en). In my most recent academic role, I served as a Postdoctoral Researcher at the [School of Computer and Communication Sciences (IC)](https://www.epfl.ch/schools/ic/) at the [École Polytechnique Fédérale de Lausanne (EPFL)](https://www.epfl.ch/en/), under the guidance of [Prof. Sabine Süsstrunk](https://www.epfl.ch/labs/ivrl/people/susstrunk/). I began my Ph.D. at the [School of Computing](https://www.comp.nus.edu.sg) at the [National University of Singapore (NUS)](http://nus.edu.sg/) in August 2015, working under the supervision of [Prof. Michael S. Brown](http://www.cse.yorku.ca/~mbrown/). After my first year, Prof. Brown transitioned to the [Lassonde School of Engineering](https://lassonde.yorku.ca) at [York University](https://www.yorku.ca/index.html) in Toronto, and I followed him there. I completed my Ph.D. in August 2019 from York University. My research interests include image processing, computer vision, and computational photography. | ![](/image/hk_profile.png){:height="1400px" width="1600px"} |
 
-| - | - | - | - |
-|---|---|---|---|
-| [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en) | [LinkedIn](https://www.linkedin.com/in/karaimer) | [GitHub](https://github.com/karaimer) | <img width="1600px" height="1400px"> |
+| - | - | - |
+|:---:|:---:|:---:|
+| [Google Scholar](https://scholar.google.com/citations?user=jhlnGS4AAAAJ&hl=en) | [LinkedIn](https://www.linkedin.com/in/karaimer) | [GitHub](https://github.com/karaimer) |
 
 ---
 
@@ -24,7 +24,7 @@ Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for co
 
 #### Patent Applications
 
-Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2022) "Method and Apparatus for Adjustting Video Brightness", *U.S. Patent*, Dec 2022 [[pdf]](https://patentimages.storage.googleapis.com/a6/e5/fa/68cb000f64f1d9/US20220417466A1.pdf)
+Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2022) "Method and Apparatus for Adjusting Video Brightness", *U.S. Patent*, Dec 2022 [[pdf]](https://patentimages.storage.googleapis.com/a6/e5/fa/68cb000f64f1d9/US20220417466A1.pdf)
 
 Wu V.Y., Yu W.H., Karaimer H.C. (2022) "Real Time Machine Learning-Based Privacy Filter for Removing Reflective Features from Images and Video", *U.S. Patent*, Oct 2022 [[pdf]](https://patentimages.storage.googleapis.com/90/e8/d1/1b612127897f77/US20220318954A1.pdf)
 
