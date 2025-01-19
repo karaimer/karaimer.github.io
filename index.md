@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Hakki Can Karaimer
+title: Hakki C. Karaimer
 tagline: hakki.can.karaimer (at) gmail.com
-description: Hakki Can Karaimer, Staff Research Scientist, Samsung Research America (SRA)
-author: Hakki Can Karaimer
+description: Hakki C. Karaimer, Staff Research Scientist, Samsung Research America (SRA)
+author: Hakki C. Karaimer
 ---
 
 | - | - |
