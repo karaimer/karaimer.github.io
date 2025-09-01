@@ -20,20 +20,9 @@ author: Hakki C. Karaimer
 
 ### Publications  
 
-#### Patents 
-
-Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, May 2022 [[pdf]](https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf) 
-
-#### Patent Applications
-
-Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2022) "Method and Apparatus for Adjusting Video Brightness", *U.S. Patent*, Dec 2022 [[pdf]](https://patentimages.storage.googleapis.com/a6/e5/fa/68cb000f64f1d9/US20220417466A1.pdf)
-
-Wu V.Y., Yu W.H., Karaimer H.C. (2022) "Real Time Machine Learning-Based Privacy Filter for Removing Reflective Features from Images and Video", *U.S. Patent*, Oct 2022 [[pdf]](https://patentimages.storage.googleapis.com/90/e8/d1/1b612127897f77/US20220318954A1.pdf)
-
-Brown M.S., Afifi M., Abdelhamed A., Karaimer H.C., Abuolaim A., Punnappurath A.  (2022) "Systems and method of Processing of a Captured Image to Facilitate Post-Processing Modification", *U.S. Patent*, July 2022 [[pdf]](https://patentimages.storage.googleapis.com/a7/19/68/5090dc2efb56a8/US20220215505A1.pdf)
-
-
 #### International Conference and Workshop Papers
+Jang H.J., Karaimer H.C., Brown M.S.  (2025) "Emulating Emulsion: A Compact Physically-Based Model for Film Colour", *SIGGRAPH Posters* (at **SIGGRAPH`25**),  August 2025 [[pdf]](https://musicofmusix.github.io/assets/misc/siggraph_abstract.pdf) [[project page]](https://musicofmusix.github.io/siggraphposters25)  
+
 Marouf I.E., Barras L., Karaimer H.C., Süsstrunk S.  (2021) "Joint Unsupervised Infrared-RGB Video Registration and Fusion", *London Imaging Meeting* (**LIM`21**),  September 2021 [[pdf]](/paper/Joint_Unsupervised_Video_Registration_and_Fusion.pdf) [[project page]](https://iemprog.github.io/joint-unsupervised/)  
 
 Karaimer H.C., Nguyen H.M.R.  (2020) "A Correspondence-Free Color Chart Design for Color Calibration", *London Imaging Meeting* (**LIM`20**),  September 2020 [[pdf]](/paper/color_pattern_LIM19_CR.pdf) [[project page]](https://karaimer.github.io/color-pattern/)  
@@ -54,6 +43,18 @@ Karaimer H.C., Cinaroglu I., Bastanlar Y.  (2015) "Combining shape-based and gra
 Karaimer H.C., Bastanlar Y.  (2015) "Detection and Classification of Vehicles from Omnidirectional Videos using Temporal Average of Silhouettes", *International Conference on Computer Vision Theory and Applications* (**VISAPP`15**), Mar 2015 [[pdf]](/paper/Karaimer_Bastanlar_VISAPP15.pdf)  
 
 Kristan M., et al.  (2013) "The Visual Object Tracking VOT2013 challenge results", *Workshop on Visual Object Tracking Challenge* (at **ICCV`13**), Dec 2013 [[pdf]](http://www.cv-foundation.org//openaccess/content_iccv_workshops_2013/W03/papers/Kristan_The_Visual_Object_2013_ICCV_paper.pdf)  
+
+#### Patents 
+
+Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, May 2022 [[pdf]](https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf) 
+
+#### Patent Applications
+
+Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2022) "Method and Apparatus for Adjusting Video Brightness", *U.S. Patent*, Dec 2022 [[pdf]](https://patentimages.storage.googleapis.com/a6/e5/fa/68cb000f64f1d9/US20220417466A1.pdf)
+
+Wu V.Y., Yu W.H., Karaimer H.C. (2022) "Real Time Machine Learning-Based Privacy Filter for Removing Reflective Features from Images and Video", *U.S. Patent*, Oct 2022 [[pdf]](https://patentimages.storage.googleapis.com/90/e8/d1/1b612127897f77/US20220318954A1.pdf)
+
+Brown M.S., Afifi M., Abdelhamed A., Karaimer H.C., Abuolaim A., Punnappurath A.  (2022) "Systems and method of Processing of a Captured Image to Facilitate Post-Processing Modification", *U.S. Patent*, July 2022 [[pdf]](https://patentimages.storage.googleapis.com/a7/19/68/5090dc2efb56a8/US20220215505A1.pdf)
 
 #### Journal Papers
 Karaimer H.C., Baris I., Bastanlar Y. (2017) "Detection and Classification of Vehicles from Omnidirectional Videos Using Multiple Silhouettes", *Pattern Analysis and Applications* (**PAA**), 20(3), Aug 2017 [[pdf]](/paper/Karaimer_et_al_PAAA_AAM.pdf)
