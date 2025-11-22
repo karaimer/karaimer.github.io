@@ -46,11 +46,11 @@ Kristan M., et al.  (2013) "The Visual Object Tracking VOT2013 challenge results
 
 #### Patents 
 
+Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2025) "Method and Apparatus for Adjusting Video Brightness", *U.S. Patent*, Sep 2025 [[pdf]](https://patents.google.com/patent/US12432313B2/en)
+
 Brown M.S., Karaimer H.C.  (2022) "Systems, methods and computer programs for colorimetric mapping", *U.S. Patent*, May 2022 [[pdf]](https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf) 
 
 #### Patent Applications
-
-Wu V.Y., Yu W.H., Karaimer H.C., Yan H.T.  (2022) "Method and Apparatus for Adjusting Video Brightness", *U.S. Patent*, Dec 2022 [[pdf]](https://patentimages.storage.googleapis.com/a6/e5/fa/68cb000f64f1d9/US20220417466A1.pdf)
 
 Wu V.Y., Yu W.H., Karaimer H.C. (2022) "Real Time Machine Learning-Based Privacy Filter for Removing Reflective Features from Images and Video", *U.S. Patent*, Oct 2022 [[pdf]](https://patentimages.storage.googleapis.com/90/e8/d1/1b612127897f77/US20220318954A1.pdf)
 
