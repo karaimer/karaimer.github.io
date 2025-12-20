@@ -21,6 +21,10 @@ author: Hakki C. Karaimer
 ### Publications  
 
 #### International Conference and Workshop Papers
+Jeddi A., Karaimer H.C., Nguyen H., Wang Z., Zhao K., Rajabi J., Zhang R., Goyal R., Taati B., Grzeszczuk R. (2025) "Puzzle Curriculum GRPO for Vision-Centric Reasoning", *arXiv Preprints* (at **arXiv`25**),  December 2025 [[pdf]](https://arxiv.org/pdf/2512.14944) [[project page]](https://pcgrpo.github.io/)  
+
+Tedla S.K., Little J.E., Karaimer H.C., Brown M.S.  (2025) "Off the Planckian Locus: Using 2D Chromaticity to Improve In-Camera Color", *arXiv Preprints* (at **arXiv`25**), November 2025 [[pdf]](https://arxiv.org/pdf/2511.17133) [[project page]](https://cst-mlp.github.io/)  
+
 Jang H.J., Karaimer H.C., Brown M.S.  (2025) "Emulating Emulsion: A Compact Physically-Based Model for Film Colour", *SIGGRAPH Posters* (at **SIGGRAPH`25**),  August 2025 [[pdf]](https://musicofmusix.github.io/assets/misc/siggraph_abstract.pdf) [[project page]](https://musicofmusix.github.io/siggraphposters25)  
 
 Marouf I.E., Barras L., Karaimer H.C., Süsstrunk S.  (2021) "Joint Unsupervised Infrared-RGB Video Registration and Fusion", *London Imaging Meeting* (**LIM`21**),  September 2021 [[pdf]](/paper/Joint_Unsupervised_Video_Registration_and_Fusion.pdf) [[project page]](https://iemprog.github.io/joint-unsupervised/)  
