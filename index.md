@@ -18,6 +18,15 @@ author: Hakki C. Karaimer
 
 ---
 
+### Talks and Tutorials  
+
+"A Study of Colour Rendering in the In-Camera Imaging Pipeline”, Visual Computing Seminar, Realistic Graphics Lab (RLG), EPFL, October 2019, [[pdf]](https://www.dropbox.com/scl/fi/1aawcl3mn17kcq7zh1rio/Karaimer_Hakki_C_2019_PhD.pdf?rlkey=m72xg7fdshrmm9t4sg17w2f11&st=5nr7cwim&dl=0). 
+
+Computational Photography (CS-413) Tutorials, EPFL, January 2020: 
+*  Image Formation, [[Jupyter Notebook]](https://github.com/karaimer/Image-Formation).
+*  Camera Imaging Pipeline, [[Jupyter Notebook]](https://github.com/karaimer/Camera-Pipeline-Python).
+*  Color Science, [[Jupyter Notebook]](https://github.com/karaimer/ColorScience).
+
 ### Publications  
 
 #### International Conference and Workshop Papers
