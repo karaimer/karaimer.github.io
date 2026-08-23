@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakki C. Karaimer</title>
+<meta name="description" content="Hakki C. Karaimer — Staff Research Scientist at Samsung Research America. Image processing, computer vision, computational photography, camera color science.">
+<meta property="og:title" content="Hakki C. Karaimer">
+<meta property="og:description" content="Staff Research Scientist, Samsung Research America — computational photography, color science, camera imaging pipelines.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf9f7">
+<script>
+/* Theme boot — runs before first paint so there is never a flash of the wrong
+   mode (same pattern as claude.ai / GitHub). Preference: light | dark | auto,
+   persisted in localStorage; 'auto' resolves against prefers-color-scheme. */
+(function(){
+  try{
+    var v = localStorage.getItem('hck-theme');
+    var p = (v === 'light' || v === 'dark' || v === 'auto') ? v : 'light';
+    document.documentElement.dataset.theme = p;
+  }catch(e){}
+})();
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e6b46'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23fff' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f7;
+    --ink:#201d1a;
+    --soft:#6d6961;
+    --faint:#a29d94;
+    --line:#e7e4de;
+    --uline:#cfcbc2;
+    --accent:#0e6b46;
+    --accent-ink:#0a5036;
+    --wash:#f1efe9;
+    --paper:#ffffff;
+    --shadow:0 1px 2px rgba(28,25,20,.06), 0 16px 40px -18px rgba(28,25,20,.22);
+    --shadow-lift:0 2px 4px rgba(28,25,20,.07), 0 24px 52px -18px rgba(28,25,20,.30);
+    --serif:'Newsreader', ui-serif, Georgia, 'Times New Roman', serif;
+    --sans:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif;
+    color-scheme:light dark;
+  }
+  /* ---- theme palettes (managed: data-theme set by JS; fallback: OS) ----
+     JS resolves the stored preference to an explicit light/dark attribute,
+     like GitHub's data-color-mode. Without JS, the media query below still
+     follows the operating system. */
+  :root[data-theme="dark"]{
+    --bg:#161514; --ink:#eceae6; --soft:#a8a49c; --faint:#78746c;
+    --line:#2b2926; --uline:#48453f; --accent:#5fc396; --accent-ink:#8ad4b1;
+    --wash:#1d1c19; --paper:#ffffff;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 16px 40px -18px rgba(0,0,0,.55);
+    --shadow-lift:0 2px 4px rgba(0,0,0,.4), 0 24px 56px -18px rgba(0,0,0,.65);
+  }
+  @media (prefers-color-scheme: dark){
+    html:not([data-theme="light"]):not([data-theme="dark"]){
+      --bg:#161514; --ink:#eceae6; --soft:#a8a49c; --faint:#78746c;
+      --line:#2b2926; --uline:#48453f; --accent:#5fc396; --accent-ink:#8ad4b1;
+      --wash:#1d1c19; --paper:#ffffff;
+      --shadow:0 1px 2px rgba(0,0,0,.35), 0 16px 40px -18px rgba(0,0,0,.55);
+      --shadow-lift:0 2px 4px rgba(0,0,0,.4), 0 24px 56px -18px rgba(0,0,0,.65);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:16.5px; line-height:1.65;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--accent); color:#fff}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px}
+
+  a{color:inherit; text-decoration:none}
+  .ln{
+    text-decoration:underline; text-decoration-color:var(--uline);
+    text-decoration-thickness:1px; text-underline-offset:3px;
+    transition:color .15s ease, text-decoration-color .15s ease;
+  }
+  .ln:hover{color:var(--accent); text-decoration-color:currentColor}
+
+  .skip{position:absolute; left:-999px; top:12px; z-index:100;
+    background:var(--ink); color:var(--bg); padding:9px 14px; border-radius:6px; font-size:14px}
+  .skip:focus{left:12px}
+
+  /* ================= layout — single editorial column =================
+     Identity is the masthead; sections flow beneath it. One structure,
+     all viewports. */
+  .layout{
+    display:block;
+    max-width:760px; margin:0 auto;
+    padding:clamp(36px,6vh,72px) clamp(20px,5vw,44px) 0;
+  }
+  main{min-width:0}
+
+  /* ================= masthead (formerly left rail) ================= */
+  .rail{position:static; padding:0 0 34px}
+  .rail-top{display:flex; align-items:center; gap:20px}
+  .avatar{width:84px; height:84px; border-radius:50%; object-fit:cover; display:block;
+    border:1px solid var(--line); background:var(--wash)}
+  h1{
+    font-family:var(--serif); font-weight:500; font-optical-sizing:auto;
+    font-size:clamp(26px,3.4vw,34px); line-height:1.14; letter-spacing:-.015em;
+    margin:0; text-wrap:balance;
+  }
+  .role{font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint); margin:10px 0 0}
+  .bio{font-size:14px; line-height:1.62; color:var(--soft); margin:16px 0 0}
+  .bio b{color:var(--ink); font-weight:550}
+  .news{font-family:var(--serif); font-style:italic; font-size:14px; color:var(--soft);
+    margin:14px 0 0; padding-top:14px; border-top:1px solid var(--line)}
+  .news .tag{font-style:normal; font-family:var(--sans); font-size:10.5px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-right:6px}
+  .news + .news{border-top:none; padding-top:0; margin-top:-2px}
+  nav.toc{margin:22px 0 0; display:flex; flex-direction:row; flex-wrap:wrap;
+    gap:4px 24px}
+  nav.toc a{
+    font-size:13.5px; color:var(--soft); padding:5px 0;
+    display:flex; align-items:center; gap:0; width:max-content;
+    background:linear-gradient(var(--uline),var(--uline)) no-repeat 0 100%/0 1px;
+    transition:background-size .22s ease, color .15s ease;
+  }
+  /* Comfortable tap targets on touch screens */
+  @media (pointer: coarse){
+    nav.toc a{padding:9px 0}
+    .contact a{padding:6px 0}
+  }
+  nav.toc a:hover{color:var(--ink)}
+  nav.toc a[aria-current="true"]{color:var(--ink); font-weight:550;
+    background-size:100% 1px}
+  .contact{padding-top:18px; font-size:13px; color:var(--faint);
+    display:flex; flex-wrap:wrap; column-gap:14px; row-gap:4px}
+  .contact a{color:var(--soft)}
+  .contact a:hover{color:var(--accent)}
+
+  /* ---- theme segmented control ---- */
+  .vh{position:absolute; width:1px; height:1px; overflow:hidden;
+    clip:rect(0 0 0 0); white-space:nowrap}
+  .theme{display:flex; align-items:center; gap:12px; margin-top:24px}
+  .theme .lbl{font-size:11px; font-weight:650; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--faint)}
+  .seg{display:inline-flex; gap:2px; padding:3px;
+    border:1px solid var(--line); border-radius:999px; background:var(--wash)}
+  .seg button{
+    appearance:none; -webkit-appearance:none; border:0; background:transparent;
+    color:var(--faint); width:30px; height:25px; border-radius:999px;
+    display:grid; place-items:center; cursor:pointer; padding:0;
+    transition:color .15s ease, background-color .15s ease, box-shadow .15s ease;
+  }
+  .seg button:hover{color:var(--ink)}
+  .seg button[aria-pressed="true"]{
+    background:var(--paper); color:var(--ink);
+    box-shadow:0 1px 3px rgba(28,25,20,.16), 0 0 0 1px rgba(28,25,20,.04);
+  }
+  /* Stronger icon contrast inside the pill (light mode) */
+  .seg button{color:var(--soft)}
+  :root[data-theme="dark"] .seg button[aria-pressed="true"]{
+    box-shadow:0 1px 3px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06)
+  }
+  .seg svg{width:13px; height:13px; display:block}
+
+  /* ================= sections ================= */
+  section{padding:clamp(36px,6vh,58px) 0; scroll-margin-top:28px}
+  section + section{border-top:1px solid var(--line)}
+  .sec-head{display:flex; align-items:baseline; gap:16px; margin:0 0 clamp(24px,4vh,36px)}
+  .sec-head h2{
+    font-family:var(--serif); font-optical-sizing:auto; font-weight:500;
+    font-size:clamp(21px,2.2vw,25px); letter-spacing:-.01em; margin:0; white-space:nowrap;
+  }
+  .sec-head::after{content:""; flex:1; border-top:1px solid var(--line); transform:translateY(-4px)}
+
+  /* ================= recent work — publication-row style ================= */
+  .recent{display:block; margin:0}
+  .recent a{
+    display:grid; grid-template-columns:44px minmax(0,1fr); gap:16px;
+    padding:15px 2px; text-decoration:none; color:inherit;
+  }
+  .recent a + a{border-top:1px solid var(--line)}
+  .recent .rt{font-family:var(--serif); font-size:17.5px; font-weight:500;
+    line-height:1.38; letter-spacing:.002em; margin:0; text-wrap:pretty; color:inherit;
+    transition:color .15s ease}
+  .recent a:hover .rt{color:var(--accent)}
+  .recent .rv-meta{margin:4px 0 0; font-size:13.5px; color:var(--soft); line-height:1.6}
+  .recent .rv-meta b{color:var(--ink); font-weight:600}
+  .recent .ry{font-size:12.5px; color:var(--faint); font-variant-numeric:tabular-nums;
+    line-height:inherit; padding-top:4px}
+  @media (max-width:560px){
+    .recent a{grid-template-columns:1fr; gap:0}
+    .recent .ry{order:-1; padding:0 0 2px; font-size:12px}
+  }
+
+  /* ================= talks & tutorials ================= */
+  .feature{display:block}
+  .paper{
+    position:relative; display:block; line-height:0;
+    border:1px solid var(--line); border-radius:3px; overflow:hidden;
+    box-shadow:var(--shadow); transform:rotate(-.5deg);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  /* Distinct plate behind the thesis card so it lifts off the page */
+  .plate{
+    background:
+      linear-gradient(135deg,
+        color-mix(in srgb, var(--accent) 5%, var(--wash)) 0%,
+        var(--wash) 55%);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:clamp(16px,2.6vw,24px);
+  }
+  :root[data-theme="dark"] .plate{
+    background:
+      linear-gradient(135deg,
+        color-mix(in srgb, var(--accent) 7%, #14181a) 0%,
+        #191d1f 55%);
+    border-color:#333a3e;
+  }
+  @media (max-width:560px){ .paper{box-shadow:var(--shadow-lift)} }
+  .paper img{width:100%; height:auto; display:block}
+  .paper:hover{transform:rotate(0) translateY(-3px); box-shadow:var(--shadow-lift)}
+  .plate-cap{font-size:11px; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--faint); margin:14px 0 0; line-height:1.5}
+  .feature-body .eyebrow{font-family:var(--serif); font-style:italic; font-size:15px;
+    color:var(--faint); margin:2px 0 8px}
+  h3.title{
+    font-family:var(--serif); font-optical-sizing:auto; font-weight:500;
+    font-size:clamp(21px,2vw,24px); line-height:1.28; letter-spacing:-.01em;
+    margin:0 0 10px; text-wrap:balance;
+  }
+  .meta{font-size:14.5px; color:var(--soft); margin:0 0 16px; max-width:52ch}
+  .cta{display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:600;
+    color:var(--accent-ink); padding-bottom:2px;
+    background:linear-gradient(currentColor,currentColor) no-repeat 0 100%/100% 1px;
+    transition:gap .2s ease}
+  .cta:hover{gap:11px}
+  .cta .ar{transition:transform .2s ease}
+  .cta:hover .ar{transform:translateX(2px)}
+
+  .tuts{margin:clamp(30px,5vh,44px) 0 0}
+  .tut-label{font-size:11px; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--faint); margin:0 0 4px}
+  .tut{list-style:none; margin:0; padding:0}
+  .tut li a{
+    display:flex; justify-content:space-between; align-items:baseline; gap:18px;
+    padding:13px 2px; border-top:1px solid var(--line); font-family:var(--serif);
+    font-size:17px; transition:background-color .15s ease;
+  }
+  .tut li:last-child a{border-bottom:1px solid var(--line)}
+  .tut a:hover{background:var(--wash)}
+  .tut .nb{flex:none; font-family:var(--sans); font-size:12px; color:var(--faint)}
+  .tut .go{opacity:0; transform:translateX(-4px); transition:.2s ease; color:var(--accent); font-family:var(--sans); font-size:14px}
+  .tut a:hover .go{opacity:1; transform:none}
+
+  /* ================= publications ================= */
+  details.group{border-top:1px solid transparent}
+  details.group + details.group{border-top:1px solid var(--line)}
+  details.group summary{
+    list-style:none; cursor:pointer; user-select:none;
+    display:flex; align-items:baseline; gap:10px; padding:14px 2px;
+    font-size:11px; font-weight:650; letter-spacing:.13em; text-transform:uppercase;
+    color:var(--faint); transition:color .15s ease;
+  }
+  details.group summary::-webkit-details-marker{display:none}
+  details.group summary:hover{color:var(--ink)}
+  details.group summary .pm{position:relative; width:11px; height:11px; flex:none; align-self:center}
+  details.group summary .pm::before, details.group summary .pm::after{
+    content:""; position:absolute; inset:0; margin:auto; background:currentColor;
+    transition:transform .2s ease;
+  }
+  details.group summary .pm::before{width:11px; height:1px}
+  details.group summary .pm::after{width:1px; height:11px}
+  details.group[open] summary .pm::after{transform:scaleY(0)}
+  .cat-body{padding:2px 0 22px}
+
+  .pub{display:grid; grid-template-columns:44px minmax(0,1fr); gap:16px; padding:15px 2px}
+  .pub + .pub{border-top:1px solid var(--line)}
+  .pub .yr{font-size:12.5px; color:var(--faint); font-variant-numeric:tabular-nums;
+    line-height:inherit; padding-top:4px}
+  .pub .pt{font-family:var(--serif); font-size:17.5px; font-weight:500; line-height:1.38;
+    letter-spacing:.002em; margin:0; text-wrap:pretty}
+  .pub .pa{margin:4px 0 0; font-size:13.5px; color:var(--soft); line-height:1.6}
+  .pub .pa b{color:var(--ink); font-weight:600}
+  .pub .pv{margin:3px 0 0; font-family:var(--serif); font-style:italic; font-size:14px;
+    color:var(--faint)}
+  .pub .pl{margin:8px 0 0; font-size:12.5px; display:flex; flex-wrap:wrap; gap:4px 14px}
+  .pub .pl a{color:var(--soft); text-decoration-color:transparent;
+    text-decoration-line:underline; text-underline-offset:3px; transition:.15s ease}
+  .pub .pl a:hover{color:var(--accent); text-decoration-color:currentColor}
+
+  /* ================= teaching ================= */
+  .teach{list-style:none; margin:0; padding:0}
+  .teach li{display:grid; grid-template-columns:118px minmax(0,1fr); gap:16px;
+    padding:12px 2px; border-top:1px solid var(--line); font-size:15px}
+  .teach li:last-child{border-bottom:1px solid var(--line)}
+  .teach .when{font-size:12.5px; color:var(--faint); font-variant-numeric:tabular-nums;
+    padding-top:3px}
+  .teach .crs{font-family:var(--serif); font-size:16.5px}
+  .teach .where{color:var(--faint); font-family:var(--sans); font-size:12.5px}
+
+  /* ================= footer ================= */
+  footer.site{border-top:1px solid var(--line); margin-top:clamp(20px,4vh,40px);
+    padding:26px 0 60px}
+  footer.site .fin{
+    display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+    font-size:12.5px; color:var(--faint);
+  }
+  footer.site a:hover{color:var(--accent)}
+
+  /* ================= motion / reveal ================= */
+  html.js .rv{opacity:0; transform:translateY(10px);
+    transition:opacity .55s cubic-bezier(.2,.6,.2,1), transform .55s cubic-bezier(.2,.6,.2,1)}
+  html.js .rv.in{opacity:1; transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none !important; animation:none !important}
+    html.js .rv{opacity:1; transform:none}
+    .paper:hover{transform:none}
+  }
+
+  /* ================= theme switching ================= */
+  /* Brief crossfade of surfaces while swapping palettes */
+  html.theming *, html.theming *::before, html.theming *::after{
+    transition:background-color .2s ease, border-color .2s ease,
+               color .2s ease, fill .2s ease !important;
+  }
+  /* Radial reveal from the toggle button via View Transitions API
+     (progressive enhancement — ignored where unsupported) */
+  ::view-transition-old(root),
+  ::view-transition-new(root){animation:none; mix-blend-mode:normal}
+  ::view-transition-old(root){z-index:1}
+  ::view-transition-new(root){
+    z-index:9999; animation:hck-vt .38s ease-out;
+    clip-path:circle(150vmax at var(--vx,50%) var(--vy,50%));
+  }
+  @keyframes hck-vt{
+    from{clip-path:circle(0 at var(--vx,50%) var(--vy,50%))}
+    to{clip-path:circle(150vmax at var(--vx,50%) var(--vy,50%))}
+  }
+
+  /* ================= R5: chromatic nameplate =================
+     On hover/focus the h1 splits into red/green/blue fringes that re-converge,
+     like a lens snapping into focus. Pure text-shadow; no layout shift. */
+  html.js h1.chroma{
+    position:relative; transition:text-shadow .35s ease;
+  }
+  @media (hover:hover){
+    h1.chroma:hover{
+      text-shadow:
+        -1.5px 0 0 rgba(255,45,0,.55),
+        0 0 1px rgba(76,217,100,.55),
+        1.5px 0 0 rgba(43,91,255,.55);
+    }
+  }
+  :root[data-theme="dark"] h1.chroma:hover{
+    text-shadow:
+      -1.5px 0 0 rgba(255,90,60,.65),
+      0 0 1px rgba(120,230,150,.55),
+      1.5px 0 0 rgba(110,150,255,.65);
+  }
+
+  /* ================= R5: command palette ================= */
+  .cmdk-scrim{
+    position:fixed; inset:0; z-index:200; display:none;
+    background:color-mix(in srgb, var(--ink) 22%, transparent);
+    backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+  }
+  .cmdk-scrim.open{display:block}
+  .cmdk{
+    position:fixed; z-index:201; left:50%; top:14vh; transform:translateX(-50%);
+    width:min(600px, calc(100vw - 32px)); max-height:66vh;
+    display:none; flex-direction:column; overflow:hidden;
+    background:var(--paper); color:var(--ink);
+    border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow-lift);
+  }
+  .cmdk.open{display:flex}
+  .cmdk input{
+    appearance:none; border:0; outline:0; background:transparent; color:inherit;
+    font-family:var(--serif); font-size:17px; padding:15px 18px;
+    border-bottom:1px solid var(--line); width:100%;
+  }
+  .cmdk input::placeholder{color:var(--faint)}
+  .cmdk ul{list-style:none; margin:0; padding:6px; overflow-y:auto}
+  .cmdk li{
+    display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+    padding:10px 12px; border-radius:6px; cursor:pointer; font-size:14px;
+  }
+  .cmdk li .t{font-family:var(--serif); font-size:15.5px; line-height:1.35}
+  .cmdk li .k{flex:none; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--faint)}
+  .cmdk li.sel{background:var(--wash)}
+  .cmdk li mark{background:none; color:var(--accent-ink); font-weight:600}
+  .cmdk .empty{padding:18px 14px; color:var(--faint); font-size:14px; display:none}
+  .cmdk .hint{border-top:1px solid var(--line); padding:8px 14px; font-size:11px;
+    color:var(--faint); display:flex; gap:16px}
+  .cmdk kbd{font:inherit; border:1px solid var(--line); border-radius:4px;
+    padding:0 5px; background:var(--wash)}
+
+  /* Touch devices have no / or ⌘K — show a tappable hint instead.
+     Declarative: both variants in markup, pointer media picks one. */
+  .touch-hint{display:none; background:none; border:0; padding:0;
+    font:inherit; cursor:pointer; color:inherit}
+  @media (pointer: coarse){
+    .kbd-hint{display:none}
+    .touch-hint{display:inline}
+  }
+
+  /* ================= small screens ================= */
+  @media (max-width:560px){
+    .rail-top{gap:16px}
+    .avatar{width:64px; height:64px}
+    h1{font-size:clamp(24px,6.4vw,28px)}
+    .feature{grid-template-columns:1fr; gap:20px}
+    .paper{max-width:250px}
+    .pub{grid-template-columns:1fr; gap:0}
+    .pub .yr{order:-1; padding:0 0 2px; font-size:12px}
+    .teach li{grid-template-columns:1fr; gap:2px}
+    .teach .when{padding:0}
+    .sec-head::after{min-width:24px}
+  }
+
+  /* ================= print ================= */
+  @media print{
+    :root{--bg:#fff; --shadow:none !important}
+    body{font-size:12px}
+    .layout{display:block; max-width:none; padding:0}
+    nav.toc,.skip,.go,.ar{display:none}
+    .paper{max-width:180px}
+    a{color:#000 !important}
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="layout">
+
+  <!-- ================= masthead ================= -->
+  <aside class="rail">
+    <div class="rail-top">
+      <img class="avatar" src="https://karaimer.github.io/image/hk_profile.png"
+           alt="Portrait of Hakki C. Karaimer">
+      <div>
+        <h1 class="chroma">Hakki C.&nbsp;Karaimer</h1>
+        <p class="role">Staff Research Scientist<br>Samsung Research America</p>
+      </div>
+    </div>
+
+    <p class="bio">
+      Image processing, computer vision &amp; computational photography —
+      Previously Qualcomm &amp; AMD · postdoc EPFL · PhD York University ·
+      TEV-SINGA PhD scholar NUS.
+    </p>
+
+    <p class="news"><span class="tag">Latest</span>
+      <a class="ln" href="https://avis-vlm.github.io/" target="_blank" rel="noopener">
+        AVIS: Adaptive Test-Time Scaling for Vision-Language Models
+      </a>
+    </p>
+
+    <p class="news"><span class="tag">Search</span>
+      <span class="kbd-hint">press <button type="button" class="ln cmdk-open"
+        style="background:none;border:0;padding:0;font:inherit;cursor:pointer;color:inherit">/ or ⌘K</button>
+      to find any paper, talk or course</span>
+      <button type="button" class="touch-hint ln cmdk-open">tap here to search papers, talks &amp; courses</button>
+    </p>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#recent" data-nav="recent">Recent</a>
+      <a href="#talks" data-nav="talks">Talks &amp; tutorials</a>
+      <a href="#publications" data-nav="publications">Publications</a>
+      <a href="#teaching" data-nav="teaching">Teaching</a>
+    </nav>
+
+    <div class="theme" role="group" aria-label="Colour theme">
+      <span class="lbl" id="theme-lbl">Theme</span>
+      <div class="seg">
+        <button type="button" data-set="light" aria-pressed="true"
+                aria-describedby="theme-lbl" title="Light theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M5.2 18.8l1.7-1.7M17.1 6.9l1.7-1.7"/>
+          </svg><span class="vh">Light</span></button>
+        <button type="button" data-set="dark" aria-pressed="false"
+                aria-describedby="theme-lbl" title="Dark theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.6 13.8A8.6 8.6 0 0 1 10.2 3.4a8.6 8.6 0 1 0 10.4 10.4Z"/>
+          </svg><span class="vh">Dark</span></button>
+        <button type="button" data-set="auto" aria-pressed="false"
+                aria-describedby="theme-lbl" title="Match system">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4.5" width="18" height="12.5" rx="2"/>
+            <path d="M9.5 21h5M12 17v4"/>
+          </svg><span class="vh">System</span></button>
+      </div>
+    </div>
+
+    <p class="contact">
+      <a href="mailto:hakki.can.karaimer@gmail.com">Email</a>
+      <a href="https://scholar.google.com/citations?user=jhlnGS4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+      <a href="https://www.linkedin.com/in/karaimer" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/karaimer" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </aside>
+
+  <main id="main">
+
+    <!-- ============== selected recent work ============== -->
+    <section id="recent" aria-labelledby="recent-h" style="padding-top:0">
+      <div class="sec-head rv"><h2 id="recent-h">Recent work</h2></div>
+      <div class="recent rv">
+        <a href="https://avis-vlm.github.io/" target="_blank" rel="noopener">
+          <span class="ry">2026</span>
+          <span class="rc">
+            <span class="rt">AVIS: Adaptive Test-Time Scaling for Vision-Language Models</span>
+            <span class="rv-meta">Ahmadreza Jeddi, Minh Ngoc Le, Amirhossein Kazerouni, <b>Karaimer H.C.</b>, Hue Nguyen, Iqbal Mohomed, Michael Brudno, Alex Levinshtein, Konstantinos G Derpanis, Babak Taati, Radek Grzeszczuk</span>
+          </span>
+        </a>
+        <a href="https://genetic-autoresearch.github.io/" target="_blank" rel="noopener">
+          <span class="ry">2026</span>
+          <span class="rc">
+            <span class="rt">GEAR: Genetic AutoResearch for Agentic Code Evolution</span>
+            <span class="rv-meta">Ahmadreza Jeddi, Minh Ngoc Le, <b>Karaimer H.C.</b>, Konstantinos G Derpanis, Babak Taati</span>
+          </span>
+        </a>
+        <a href="https://puzzlecraftgrpo.github.io/" target="_blank" rel="noopener">
+          <span class="ry">2025</span>
+          <span class="rc">
+            <span class="rt">PuzzleCraft: Exploration-Aware Curriculum Learning for Puzzle-Based RLVR in VLMs</span>
+            <span class="rv-meta">Ahmadreza Jeddi, <b>Karaimer H.C.</b>, Hue Nguyen, Zhongling Wang, Ke Zhao, Javad Rajabi, Ran Zhang, Raghav Goyal, Konstantinos G Derpanis, Babak Taati, Radek Grzeszczuk</span>
+          </span>
+        </a>
+        <a href="https://arxiv.org/pdf/2511.17133" target="_blank" rel="noopener">
+          <span class="ry">2025</span>
+          <span class="rc">
+            <span class="rt">Off the Planckian Locus: 2D Chromaticity for In-Camera Color</span>
+            <span class="rv-meta">Tedla S.K., Little J.E., <b>Karaimer H.C.</b>, Brown M.S. — arXiv · November 2025</span>
+          </span>
+        </a>
+        <a href="https://musicofmusix.github.io/siggraphposters25" target="_blank" rel="noopener">
+          <span class="ry">2025</span>
+          <span class="rc">
+            <span class="rt">Emulating Emulsion: A Physically-Based Model for Film Colour</span>
+            <span class="rv-meta">Jang H.J., <b>Karaimer H.C.</b>, Brown M.S. — SIGGRAPH Posters · August 2025</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============== talks & tutorials ============== -->
+    <!-- The PhD thesis title page anchors the section, as requested. -->
+    <section id="talks" aria-labelledby="talks-h">
+      <div class="sec-head rv"><h2 id="talks-h">Talks &amp; tutorials</h2></div>
+
+      <figure class="feature rv" style="margin:0">
+        <div class="feature-body">
+          <p class="eyebrow">Visual Computing Seminar — Realistic Graphics Lab (RLG), EPFL · October 2019</p>
+          <h3 class="title">A Study of Colour Rendering in the In-Camera Imaging Pipeline</h3>
+          <p class="meta">Seminar lecture covering end-to-end colour rendering in camera
+            imaging pipelines — from raw sensor data to finished photographs.</p>
+          <a class="cta" href="https://www.dropbox.com/scl/fi/1aawcl3mn17kcq7zh1rio/Karaimer_Hakki_C_2019_PhD.pdf?rlkey=m72xg7fdshrmm9t4sg17w2f11&st=5nr7cwim&dl=0"
+             target="_blank" rel="noopener">View the talk <span class="ar">↗</span></a>
+        </div>
+      </figure>
+
+      <div class="tuts rv">
+        <p class="tut-label">Tutorials — CS-413 Computational Photography · EPFL · January 2020</p>
+        <ul class="tut">
+          <li><a href="https://github.com/karaimer/Image-Formation" target="_blank" rel="noopener">Image Formation<span class="go">↗</span><span class="nb">Jupyter notebook</span></a></li>
+          <li><a href="https://github.com/karaimer/Camera-Pipeline-Python" target="_blank" rel="noopener">Camera Imaging Pipeline<span class="go">↗</span><span class="nb">Jupyter notebook</span></a></li>
+          <li><a href="https://github.com/karaimer/ColorScience" target="_blank" rel="noopener">Color Science<span class="go">↗</span><span class="nb">Jupyter notebook</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============== publications ============== -->
+    <section id="publications" aria-labelledby="pubs-h">
+      <div class="sec-head rv"><h2 id="pubs-h">Publications</h2></div>
+
+      <details class="group rv" open>
+        <summary>Conference &amp; workshop papers<span class="pm"></span></summary>
+        <div class="cat-body">
+
+          <article class="pub">
+            <span class="yr">2026</span>
+            <div>
+              <p class="pt">AVIS: Adaptive Test-Time Scaling for Vision-Language Models</p>
+              <p class="pa">Jeddi A., Le M.N., Kazerouni A., <b>Karaimer H.C.</b>, Nguyen H., Mohomed I., Brudno M., Levinshtein A., Derpanis K.G., Taati B., Grzeszczuk R.</p>
+              <p class="pv">2026</p>
+              <p class="pl"><a href="https://arxiv.org/abs/2606.11576" target="_blank" rel="noopener">PDF</a><a href="https://avis-vlm.github.io/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2026</span>
+            <div>
+              <p class="pt">GEAR: Genetic AutoResearch for Agentic Code Evolution</p>
+              <p class="pa">Jeddi A., Le M.N., <b>Karaimer H.C.</b>, Derpanis K.G., Taati B.</p>
+              <p class="pv">2026</p>
+              <p class="pl"><a href="https://arxiv.org/abs/2605.13874" target="_blank" rel="noopener">PDF</a><a href="https://genetic-autoresearch.github.io/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2025</span>
+            <div>
+              <p class="pt">PuzzleCraft: Exploration-Aware Curriculum Learning for Puzzle-Based RLVR in VLMs</p>
+              <p class="pa">Jeddi A., <b>Karaimer H.C.</b>, Nguyen H., Wang Z., Zhao K., Rajabi J., Zhang R., Goyal R., Derpanis K.G., Taati B., Grzeszczuk R.</p>
+              <p class="pv">arXiv preprint, December 2025</p>
+              <p class="pl"><a href="https://arxiv.org/pdf/2512.14944" target="_blank" rel="noopener">PDF</a><a href="https://puzzlecraftgrpo.github.io/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2025</span>
+            <div>
+              <p class="pt">Off the Planckian Locus: Using 2D Chromaticity to Improve In-Camera Color</p>
+              <p class="pa">Tedla S.K., Little J.E., <b>Karaimer H.C.</b>, Brown M.S.</p>
+              <p class="pv">arXiv preprint, November 2025</p>
+              <p class="pl"><a href="https://arxiv.org/pdf/2511.17133" target="_blank" rel="noopener">PDF</a><a href="https://cst-mlp.github.io/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2025</span>
+            <div>
+              <p class="pt">Emulating Emulsion: A Compact Physically-Based Model for Film Colour</p>
+              <p class="pa">Jang H.J., <b>Karaimer H.C.</b>, Brown M.S.</p>
+              <p class="pv">SIGGRAPH Posters ’25, August 2025</p>
+              <p class="pl"><a href="https://musicofmusix.github.io/assets/misc/siggraph_abstract.pdf" target="_blank" rel="noopener">PDF</a><a href="https://musicofmusix.github.io/siggraphposters25" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2021</span>
+            <div>
+              <p class="pt">Joint Unsupervised Infrared-RGB Video Registration and Fusion</p>
+              <p class="pa">Marouf I.E., Barras L., <b>Karaimer H.C.</b>, Süsstrunk S.</p>
+              <p class="pv">London Imaging Meeting (LIM) ’21, September 2021</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Joint_Unsupervised_Video_Registration_and_Fusion.pdf" target="_blank" rel="noopener">PDF</a><a href="https://iemprog.github.io/joint-unsupervised/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2020</span>
+            <div>
+              <p class="pt">A Correspondence-Free Color Chart Design for Color Calibration</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Nguyen H.M.R.</p>
+              <p class="pv">London Imaging Meeting (LIM) ’20, September 2020</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/color_pattern_LIM19_CR.pdf" target="_blank" rel="noopener">PDF</a><a href="https://karaimer.github.io/color-pattern/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2019</span>
+            <div>
+              <p class="pt">Beyond raw-RGB and sRGB: Advocating Access to a Colorimetric Image State</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Brown M.S.</p>
+              <p class="pv">Color and Imaging Conference (CIC) ’19, October 2019</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Brown_CIC19.pdf" target="_blank" rel="noopener">PDF</a><a href="https://karaimer.github.io/beyond-rawRGB-sRGB/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2019</span>
+            <div>
+              <p class="pt">Color Temperature Tuning: Allowing Accurate Post-Capture White-Balance Editing</p>
+              <p class="pa">Afifi M., Punnappurath A., Abdelhamed A., <b>Karaimer H.C.</b>, Abuolaim A., Brown M.S.</p>
+              <p class="pv">Color and Imaging Conference (CIC) ’19, October 2019</p>
+              <p class="pl"><a href="http://cvil.eecs.yorku.ca/projects/public_html/ColorTemperatureTuning/files/ColorTemperatureTuning.pdf" target="_blank" rel="noopener">PDF</a><a href="http://cvil.eecs.yorku.ca/projects/public_html/ColorTemperatureTuning/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2019</span>
+            <div>
+              <p class="pt">A Customized Camera Imaging Pipeline for Dermatological Imaging</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Khodadad I., Kazemzadeh F., Brown M.S.</p>
+              <p class="pv">ISIC Skin Image Analysis Workshop @ CVPR ’19, June 2019</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_et_al_2019.pdf" target="_blank" rel="noopener">PDF</a><a href="https://karaimer.github.io/customized-camera/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2018</span>
+            <div>
+              <p class="pt">Improving Color Reproduction Accuracy on Cameras</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Brown M.S.</p>
+              <p class="pv">IEEE CVPR ’18, June 2018</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Brown_CVPR18.pdf" target="_blank" rel="noopener">PDF</a><a href="https://karaimer.github.io/camera-color/" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2016</span>
+            <div>
+              <p class="pt">A Software Platform for Manipulating the Camera Imaging Pipeline</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Brown M.S.</p>
+              <p class="pv">European Conference on Computer Vision (ECCV) ’16, October 2016</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Brown_ECCV16.pdf" target="_blank" rel="noopener">PDF</a><a href="https://karaimer.github.io/camera-pipeline" target="_blank" rel="noopener">Project</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2015</span>
+            <div>
+              <p class="pt">Combining shape-based and gradient-based classifiers for vehicle classification</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Cinaroglu I., Bastanlar Y.</p>
+              <p class="pv">IEEE ITSC ’15, September 2015</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_et_al_ITSC15.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2015</span>
+            <div>
+              <p class="pt">Detection and Classification of Vehicles from Omnidirectional Videos using Temporal Average of Silhouettes</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Bastanlar Y.</p>
+              <p class="pv">VISAPP ’15, March 2015</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Bastanlar_VISAPP15.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+
+          <article class="pub">
+            <span class="yr">2013</span>
+            <div>
+              <p class="pt">The Visual Object Tracking VOT2013 challenge results</p>
+              <p class="pa">Kristan M., et al.</p>
+              <p class="pv">VOT Challenge Workshop @ ICCV ’13, December 2013</p>
+              <p class="pl"><a href="http://www.cv-foundation.org//openaccess/content_iccv_workshops_2013/W03/papers/Kristan_The_Visual_Object_2013_ICCV_paper.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+
+        </div>
+      </details>
+
+      <details class="group rv" open>
+        <summary>Journal papers<span class="pm"></span></summary>
+        <div class="cat-body">
+          <article class="pub">
+            <span class="yr">2017</span>
+            <div>
+              <p class="pt">Detection and Classification of Vehicles from Omnidirectional Videos Using Multiple Silhouettes</p>
+              <p class="pa"><b>Karaimer H.C.</b>, Baris I., Bastanlar Y.</p>
+              <p class="pv">Pattern Analysis and Applications, 20(3), August 2017</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_et_al_PAAA_AAM.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <details class="group rv">
+        <summary>Patents<span class="pm"></span></summary>
+        <div class="cat-body">
+          <article class="pub">
+            <span class="yr">2025</span>
+            <div>
+              <p class="pt">Method and Apparatus for Adjusting Video Brightness</p>
+              <p class="pa">Wu V.Y., Yu W.H., <b>Karaimer H.C.</b>, Yan H.T.</p>
+              <p class="pv">U.S. Patent, September 2025</p>
+              <p class="pl"><a href="https://patents.google.com/patent/US12432313B2/en" target="_blank" rel="noopener">Patent</a></p>
+            </div>
+          </article>
+          <article class="pub">
+            <span class="yr">2022</span>
+            <div>
+              <p class="pt">Systems, methods and computer programs for colorimetric mapping</p>
+              <p class="pa">Brown M.S., <b>Karaimer H.C.</b></p>
+              <p class="pv">U.S. Patent, May 2022</p>
+              <p class="pl"><a href="https://patentimages.storage.googleapis.com/0f/37/f3/8d153bd6eac33c/US11350070.pdf" target="_blank" rel="noopener">Patent</a></p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <details class="group rv">
+        <summary>Patent applications<span class="pm"></span></summary>
+        <div class="cat-body">
+          <article class="pub">
+            <span class="yr">2022</span>
+            <div>
+              <p class="pt">Real Time Machine Learning-Based Privacy Filter for Removing Reflective Features from Images and Video</p>
+              <p class="pa">Wu V.Y., Yu W.H., <b>Karaimer H.C.</b></p>
+              <p class="pv">U.S. Patent Application, October 2022</p>
+              <p class="pl"><a href="https://patentimages.storage.googleapis.com/90/e8/d1/1b612127897f77/US20220318954A1.pdf" target="_blank" rel="noopener">Patent</a></p>
+            </div>
+          </article>
+          <article class="pub">
+            <span class="yr">2022</span>
+            <div>
+              <p class="pt">Systems and method of Processing of a Captured Image to Facilitate Post-Processing Modification</p>
+              <p class="pa">Brown M.S., Afifi M., Abdelhamed A., <b>Karaimer H.C.</b>, Abuolaim A., Punnappurath A.</p>
+              <p class="pv">U.S. Patent Application, July 2022</p>
+              <p class="pl"><a href="https://patentimages.storage.googleapis.com/a7/19/68/5090dc2efb56a8/US20220215505A1.pdf" target="_blank" rel="noopener">Patent</a></p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <details class="group rv">
+        <summary>National conference papers<span class="pm"></span></summary>
+        <div class="cat-body">
+          <article class="pub">
+            <span class="yr">2015</span>
+            <div>
+              <p class="pt">Classification of Vehicles Using Binary Foreground Images Averaged Over Time <i>(in Turkish)</i></p>
+              <p class="pa"><b>Karaimer H.C.</b>, Bastanlar Y.</p>
+              <p class="pv">IEEE SIU ’15, May 2015</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Bastanlar_SIU2015.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+          <article class="pub">
+            <span class="yr">2014</span>
+            <div>
+              <p class="pt">Car Detection with Omnidirectional Cameras Using Haar-Like Features and Cascaded Boosting <i>(in Turkish)</i></p>
+              <p class="pa"><b>Karaimer H.C.</b>, Bastanlar Y.</p>
+              <p class="pv">IEEE SIU ’14, April 2014</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Bastanlar_SIU2014.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <details class="group rv" open>
+        <summary>Theses<span class="pm"></span></summary>
+        <div class="cat-body">
+          <article class="pub">
+            <span class="yr">2019</span>
+            <div>
+              <p class="pt">A Study of Colour Rendering in the In-Camera Imaging Pipeline</p>
+              <p class="pa"><b>Karaimer H.C.</b></p>
+              <p class="pv">PhD thesis, York University, August 2019</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_Hakki_C_2019_PhD.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+          <article class="pub">
+            <span class="yr">2015</span>
+            <div>
+              <p class="pt">Shape Based Detection and Classification of Vehicles using Omnidirectional Videos</p>
+              <p class="pa"><b>Karaimer H.C.</b></p>
+              <p class="pv">MSc thesis, Izmir Institute of Technology, June 2015</p>
+              <p class="pl"><a href="https://karaimer.github.io/paper/Karaimer_MSc_Thesis.pdf" target="_blank" rel="noopener">PDF</a></p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+    </section>
+
+    <!-- ============== teaching ============== -->
+    <section id="teaching" aria-labelledby="teach-h">
+      <div class="sec-head rv"><h2 id="teach-h">Teaching</h2></div>
+      <ul class="teach rv">
+        <li><span class="when">Winter 2020 · EPFL</span><span class="crs"><a class="ln" href="https://edu.epfl.ch/coursebook/en/computational-photography-CS-413" target="_blank" rel="noopener">CS-413 · Computational Photography</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Winter 2019 · York</span><span class="crs"><a class="ln" href="https://www.eecs.yorku.ca/course_archive/2018-19/W/1022/" target="_blank" rel="noopener">EECS 1022 · Programming for Mobile Computing</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Fall 2018 · York</span><span class="crs"><a class="ln" href="https://wiki.eecs.yorku.ca/course_archive/2018-19/F/4422/" target="_blank" rel="noopener">EECS 4422/5323 · Computer Vision</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Winter 2018 · York</span><span class="crs"><a class="ln" href="https://www.eecs.yorku.ca/course_archive/2017-18/W/2011Z/" target="_blank" rel="noopener">EECS 2011Z · Fundamentals of Data Structures</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Fall 2017 · York</span><span class="crs"><a class="ln" href="https://wiki.eecs.yorku.ca/course_archive/2017-18/F/4422/" target="_blank" rel="noopener">EECS 4422/5323 · Computer Vision</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Winter 2017 · York</span><span class="crs"><a class="ln" href="http://www.eecs.yorku.ca/course_archive/2016-17/W/1021/" target="_blank" rel="noopener">EECS 1021 · OOP from Sensors to Actuators</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Fall 2016 · York</span><span class="crs"><a class="ln" href="http://www.cs.yorku.ca/~jarek/courses/1019/F16/" target="_blank" rel="noopener">EECS/MATH 1019 · Discrete Math for CS</a> <span class="where">— TA</span></span></li>
+        <li><span class="when">Sem 2 · AY15/16 · NUS</span><span class="crs"><a class="ln" href="http://www.comp.nus.edu.sg/~brown/cs2010/" target="_blank" rel="noopener">CS2010 · Data Structures and Algorithms II</a> <span class="where">— TA</span></span></li>
+      </ul>
+    </section>
+
+    <footer class="site">
+      <div class="fin">
+        <span>© 2026 Hakki C. Karaimer</span>
+        <a class="ln" href="#main">Back to top ↑</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<!-- R5: command palette -->
+<div class="cmdk-scrim" hidden></div>
+<div class="cmdk" role="dialog" aria-modal="true" aria-label="Search this site" hidden>
+  <input type="text" placeholder="Search papers, talks, teaching…" aria-label="Search">
+  <p class="empty">Nothing found — try a title, venue or year.</p>
+  <ul></ul>
+  <div class="hint"><span><kbd>↑↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveal on scroll */
+  var els = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.08, rootMargin:'0px 0px -4% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* scroll spy for the rail nav */
+  var links = document.querySelectorAll('nav.toc a');
+  function setCurrent(id){
+    links.forEach(function(l){
+      l.setAttribute('aria-current', l.dataset.nav === id ? 'true' : 'false');
+    });
+  }
+  var ids = ['recent','talks','publications','teaching'];
+  var secs = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if ('IntersectionObserver' in window && secs.length){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) setCurrent(e.target.id); });
+    }, {rootMargin:'-30% 0px -60% 0px'});
+    secs.forEach(function(s){ spy.observe(s); });
+  }
+
+  /* ---- theme controller: light · dark · system (persisted) ----
+     Same model as claude.ai / GitHub: explicit choice wins; 'system'
+     follows prefers-color-scheme and live-updates when the OS flips. */
+  var KEY = 'hck-theme';
+  var mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+  var htmlEl = document.documentElement;
+
+  function getPref(){
+    try{
+      var v = localStorage.getItem(KEY);
+      return (v === 'light' || v === 'dark' || v === 'auto') ? v : 'light';
+    }catch(e){ return 'light'; }
+  }
+  function resolve(p){ return p === 'auto' ? (mqDark.matches ? 'dark' : 'light') : p; }
+
+  function applyTheme(pref, animate, x, y){
+    var eff = resolve(pref);
+    var swap = function(){
+      htmlEl.classList.add('theming');
+      htmlEl.dataset.theme = eff;
+      setTimeout(function(){ htmlEl.classList.remove('theming'); }, 300);
+    };
+    if (animate && !reduce && document.startViewTransition){
+      if (x !== undefined){
+        htmlEl.style.setProperty('--vx', x + 'px');
+        htmlEl.style.setProperty('--vy', y + 'px');
+      }
+      document.startViewTransition(swap);
+    } else {
+      swap();
+    }
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.content = (eff === 'dark') ? '#161514' : '#faf9f7';
+    document.querySelectorAll('.seg [data-set]').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set === pref));
+    });
+  }
+
+  var pref = getPref();
+  applyTheme(pref, false);
+
+  document.querySelectorAll('.seg [data-set]').forEach(function(b){
+    b.addEventListener('click', function(ev){
+      pref = b.dataset.set;
+      try{ localStorage.setItem(KEY, pref); }catch(e){}
+      applyTheme(pref, true, ev.clientX, ev.clientY);
+    });
+  });
+
+  function onSystemChange(){
+    if (getPref() === 'auto') applyTheme('auto', false);
+  }
+  if (mqDark.addEventListener) mqDark.addEventListener('change', onSystemChange);
+  else if (mqDark.addListener) mqDark.addListener(onSystemChange);
+
+  /* ---- R5: command palette (⌘K / /) — indexes everything on the page ---- */
+  var scrim = document.querySelector('.cmdk-scrim');
+  var box   = document.querySelector('.cmdk');
+  var input = box.querySelector('input');
+  var list  = box.querySelector('ul');
+  var empty = box.querySelector('.empty');
+  var items = [];
+
+  function indexPage(){
+    items = [];
+    document.querySelectorAll('.pub').forEach(function(p){
+      var a = p.querySelector('.pl a');
+      items.push({
+        t: p.querySelector('.pt').textContent.trim(),
+        s: p.querySelector('.pv').textContent.trim(),
+        k: 'Publication',
+        href: a ? a.href : null
+      });
+    });
+    document.querySelectorAll('.tut li a').forEach(function(a){
+      items.push({t:a.textContent.replace('↗','').trim(), s:'EPFL tutorial notebook',
+                  k:'Talk', href:a.href});
+    });
+    document.querySelectorAll('.teach .crs a').forEach(function(a){
+      var li = a.closest('.teach li');
+      items.push({t:a.textContent.trim(), s:li.querySelector('.when').textContent.trim(),
+                  k:'Teaching', href:a.href});
+    });
+  }
+
+  function render(q){
+    q = q.trim().toLowerCase();
+    var words = q.split(/\s+/).filter(Boolean);
+    var hits = items.filter(function(it){
+      var hay = (it.t + ' ' + it.s + ' ' + it.k).toLowerCase();
+      return words.every(function(w){ return hay.indexOf(w) !== -1; });
+    }).slice(0, 12);
+    list.innerHTML = '';
+    empty.style.display = hits.length ? 'none' : 'block';
+    hits.forEach(function(it, i){
+      var li = document.createElement('li');
+      if (i === 0) li.className = 'sel';
+      var t = it.t;
+      if (q){
+        var first = t.toLowerCase().indexOf(words[0]);
+        if (first !== -1)
+          t = t.slice(0, first) + '<mark>' + t.slice(first, first + words[0].length) + '</mark>' +
+              t.slice(first + words[0].length);
+      }
+      li.innerHTML = '<span class="t">' + t + '</span><span class="k">' + it.k + '</span>';
+      li.addEventListener('click', function(){ go(it); });
+      list.appendChild(li);
+    });
+    return hits;
+  }
+
+  var current = [];
+  function go(it){
+    close();
+    if (it.href && !it.hash){ window.open(it.href, '_blank', 'noopener'); return; }
+    if (it.hash){ document.getElementById(it.hash.slice(1)).scrollIntoView(); return; }
+  }
+
+  function open(){
+    indexPage();
+    scrim.hidden = false; box.hidden = false;
+    scrim.classList.add('open'); box.classList.add('open');
+    input.value = ''; current = render('');
+  }
+  function close(){
+    scrim.classList.remove('open'); box.classList.remove('open');
+    scrim.hidden = true; box.hidden = true;
+  }
+
+  document.addEventListener('keydown', function(e){
+    var typing = /^(input|textarea|select)$/i.test(document.activeElement.tagName);
+    if (((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') ||
+        (e.key === '/' && !typing)){
+      e.preventDefault(); open(); input.focus();
+    } else if (e.key === 'Escape' && !box.hidden){ close(); }
+  });
+  document.querySelectorAll('.cmdk-open').forEach(function(b){
+    b.addEventListener('click', function(){ open(); input.focus(); });
+  });
+  scrim.addEventListener('click', close);
+
+  input.addEventListener('input', function(){ current = render(input.value); });
+  input.addEventListener('keydown', function(e){
+    if (!current.length) return;
+    var lis = list.querySelectorAll('li'), idx = 0;
+    lis.forEach(function(li, i){ if (li.classList.contains('sel')) idx = i; });
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){
+      e.preventDefault();
+      lis[idx].classList.remove('sel');
+      idx = (idx + (e.key === 'ArrowDown' ? 1 : -1) + lis.length) % lis.length;
+      lis[idx].classList.add('sel');
+      lis[idx].scrollIntoView({block:'nearest'});
+    } else if (e.key === 'Enter'){ go(current[idx]); }
+  });
+})();
+</script>
+</body>
+</html>
